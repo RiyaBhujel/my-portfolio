@@ -1,104 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <header id="hero">
+  
+    <header class="hero">
+  <video autoplay muted loop playsinline id="hero-video">
+    <source src="https://www.pexels.com/download/video/6177726/" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-        <section class="video-section">
-    <video id="hero-video" loop muted>
-      <source src="https://www.pexels.com/download/video/6177726/">
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-  </section>
+  <div class="hero-content">
+  <h1>Hi, I'm Riya</h1>
+  <p>Frontend Developer & UI/UX Enthusiast</p>
+  <button class="cta-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+    View My Work
+  </button>
+</div>
 
-    <section class="section audio-section">
+
+  <nav class="navbar">
+    <div class="logo">My Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle">☰</button>
+  </nav>
+
+
+  </header>
+  <div class="about-content">
+    <h2>About Me</h2>
+    <p>Hi, I’m <strong>Riya Bhujel,</strong> a passionate frontend developer and UI/UX enthusiast. I enjoy creating clean, user-friendly, and visually appealing digital experiences. I love working with modern web technologies and continuously improving my skills through real-world projects, creative design, and hands-on learning.
+    My goal is to build interactive, accessible websites and applications that make a positive impact and provide seamless user experiences.</p>
+  </div>
+</section>
+
+
+  <section class="section audio-section">
     <audio id="sample-audio" controls>
       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
-    <br><br>
-    <button id="toggle-audio">Play Audio</button>
+
+  <section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Git / GitHub</div>
+      <div class="skill">Figma</div>
+    </div>
   </section>
 
-        <nav class="navbar">
-            <span class="logo">My Portfolio</span>
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+ 
+  <div class="project-card">
+    <h3>Drive Smart Academy</h3>
+    <p>A 3D driving simulation created in Unity focusing on safe driving practices and interactive learning.</p>
+  </div>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+  <!-- Java Banking System -->
+  <div class="project-card">
+    <h3>Java Banking System</h3>
+    <p>A console-based banking system developed in Java, featuring account management, transactions, and data persistence using CSV files.</p>
+  </div>
 
-            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
-            </button>
-            <Hamburger icon can be a simple text or SVG >
-☰
-        </nav>
+  <div class="project-card">
+    <h3>Personal Portfolio Website</h3>
+    <p>A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase projects and skills.</p>
+  </div>
+</div>
 
-        <div class="hero-content">
-            <h1>Riya Bhujel</h1>
-            <p>Frontend Developer & UI/UX Enthusiast</p>
-        </div>
+  </section>
 
-        <audio id="click-audio" src="click-sound.mp3"></audio>
-    </header>
+ <section id="contact" class="section contact">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <p><span class="icon">✉️</span> bhujelriya1@gmail.com</p>
+    <p><span class="icon">📍</span> Urlabari-7, Morang, Nepal</p>
+  </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I’m <strong>Riya Bhujel</strong>, a passionate frontend developer and UI/UX enthusiast. 
-        I enjoy creating clean, user-friendly, and visually appealing digital experiences. 
-        I love working with modern web technologies and continuously improving my skills through 
-        real-world projects, creative design, and hands-on learning.
-        <br><br>
-        My goal is to build interactive, accessible websites and applications that make a positive impact and provide seamless user experiences.</p>
-    </section>
-
-    <section id="skills">
-    <h2>Skills</h2>
-    <p>
-        <strong>Technical Skills:</strong><br>
-        • HTML5, CSS3, JavaScript<br>
-        • Git & GitHub<br>
-        • Basic Python & Java<br>
-
-    </p>
-</section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <p><strong>Drive Smart Academy (3D Driving Simulation)</strong><br>
-        Built in Unity using C#, featuring vehicle controls, environment design, raycasting 
-        for traffic signs, UI toggles, and interaction systems.<br><br></p>
-    </section>
-
-    <section id="contact">
-    <h2>Contact</h2>
-
-    <form>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea><br><br>
-
-        <button type="submit">Send</button>
-    </form>
-
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Name *" required>
+    <input type="email" name="email" placeholder="Email *" required>
+    <textarea name="message" placeholder="Message *" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 
-    <footer>
-        <p>© 2025 Riya Bhujel. All rights reserved.</p>
-    </footer>
+  <footer class="footer">
+    <p>© 2025 Riya Bhujel</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
